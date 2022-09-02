@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class P0007
+public class P007
 {
     public static void main(String[] args)
     {
