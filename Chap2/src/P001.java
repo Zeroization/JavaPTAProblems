@@ -17,7 +17,7 @@ public class P001
                     fib(Integer.parseInt(in.nextLine()));
                     break;
                 case "sort":
-                    //防止重复的sort出现，导致数据堆积
+                    //防止重复的sort出现，导致新旧数据堆积
                     num = Arrays.copyOf(new int[0], 0);
                     String[] a = in.nextLine().split(" ");
                     for (String val: a)
@@ -55,9 +55,8 @@ public class P001
         int[] arr = new int[100];
         arr[0] = arr[1] = 1;
 
-        if (arr[x-1] == 0)
-            for (int i = 2; i < x; i++)
-                arr[i] = arr[i - 2] + arr[i - 1];
+        for (int i = 2; i < x; i++)
+            arr[i] = arr[i - 2] + arr[i - 1];
 
         System.out.print(arr[0]);
         for (int i = 1; i < x; i++)
